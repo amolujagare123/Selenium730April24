@@ -1,5 +1,7 @@
 package Junit;
 
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,11 +10,24 @@ import org.junit.Test;
 
 public class LoginJunitDemo {
 
+    WebDriver driver;
+
+    @Before // this method will run before every test method
+    public void openBrowser()
+    {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+
+    @After // this method will run after every test method
+    public void closeBrowser()
+    {
+        driver.close();
+
+    }
     @Test
     public void loginTest1() {
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.get("https://stock.scriptinglogic.org/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));
@@ -28,9 +43,7 @@ public class LoginJunitDemo {
     @Test
     public void loginTest2() {
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://stock.scriptinglogic1.org/");
+        driver.get("https://stock.scriptinglogic.org/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));
         txtUsername.sendKeys("dsds");
@@ -45,8 +58,7 @@ public class LoginJunitDemo {
     @Test
     public void loginTest3() {
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
         driver.get("https://stock.scriptinglogic.org/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));

@@ -1,0 +1,31 @@
+<suite name="Project Name">
+
+    <groups>
+        <run>
+            <include name="email"/>
+        </run>
+    </groups>
+
+    <test name="Module 1">
+        <classes>
+
+            <class name="TestNGDemo.Demo4.ClassOne">
+                <methods>
+                   <!-- <exclude name="classOneTest2"/>
+                    <exclude name="classOneTest3"/>-->
+                   <!-- <include name="classOneTest3"/>-->
+                </methods>
+            </class>
+
+
+            <class name="TestNGDemo.Demo4.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="Module 2">
+        <classes>
+            <class name="TestNGDemo.Demo4.ClassThree"/>
+        </classes>
+    </test>
+
+</suite>
