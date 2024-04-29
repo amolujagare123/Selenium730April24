@@ -1,0 +1,22 @@
+<suite name="Project Name">
+
+
+    <parameter name="myUrl" value="http://facebook.com"/>
+    <parameter name="myUsername" value="amol"/>
+    <parameter name="myPassword" value="fb1234"/>
+
+
+    <test name="Module 1">
+        <classes>
+            <class name="TestNGDemo.DemoParam.ClassOne"/>
+            <class name="TestNGDemo.DemoParam.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="Module 2">
+        <classes>
+            <class name="TestNGDemo.DemoParam.ClassThree"/>
+        </classes>
+    </test>
+
+</suite>
