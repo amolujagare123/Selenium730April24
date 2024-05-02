@@ -10,7 +10,13 @@ public class LoginDemo {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
+
+     /*   WebDriver.Options manage = driver.manage();
+        WebDriver.Window win = manage.window();
+        win.maximize();*/
+
         driver.manage().window().maximize();
+
         driver.get("https://stock.scriptinglogic.org/");
 
         WebElement txtUsername = driver.findElement(By.xpath("//input[@id='login-username']"));
