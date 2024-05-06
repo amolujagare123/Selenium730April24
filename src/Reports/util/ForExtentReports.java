@@ -1,5 +1,7 @@
 package Reports.util;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,6 +13,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ForExtentReports {
+
+    public static ExtentReports initExtent()
+    {
+        ExtentSparkReporter reporter = new ExtentSparkReporter("Report/report.html");
+        ExtentReports extent = new ExtentReports();
+        extent.attachReporter(reporter);
+
+        reporter.config().setDocumentTitle("Stock Management System");
+        reporter.config().setReportName("Regression Testing");
+
+        extent.setSystemInfo("Project Name","Stock Management System");
+        extent.setSystemInfo("Developers Name","Prakash");
+        extent.setSystemInfo("Testers Name","Suchi");
+        extent.setSystemInfo("Managers Name","Seema");
+        extent.setSystemInfo("Build Version","SM-v1.22");
+
+        return extent;
+    }
 
 
     public static String getScreenshot(WebDriver driver) throws IOException {

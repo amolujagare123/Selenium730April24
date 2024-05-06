@@ -1,0 +1,20 @@
+<suite name="Project Name">
+
+    <listeners>
+        <listener class-name="Reports.util.MyListeners"/>
+    </listeners>
+
+    <test name="Module 1">
+        <classes>
+            <class name="TestNGDemo.DemoListener1.ClassOne"/>
+            <class name="TestNGDemo.DemoListener1.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="Module 2">
+        <classes>
+            <class name="TestNGDemo.DemoListener1.ClassThree"/>
+        </classes>
+    </test>
+
+</suite>

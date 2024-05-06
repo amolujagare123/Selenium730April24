@@ -1,0 +1,21 @@
+<suite name="All sites">
+
+    <listeners>
+        <listener class-name="Reports.util.ExtentReportListeners" />
+    </listeners>
+
+
+    <test name="Study Sites">
+        <classes>
+            <class name="TestNGDemo.Demo2.TutorialSites"/>
+            <class name="TestNGDemo.Demo2.AISites"/>
+        </classes>
+    </test>
+
+    <test name="Social sites">
+        <classes>
+            <class name="TestNGDemo.Demo2.SocialSites"/>
+        </classes>
+    </test>
+
+</suite>
