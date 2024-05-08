@@ -46,7 +46,7 @@ public class TestNGDemo1 {
     }
 
     @Test
-    public void loginTest13()
+    public void loginTest3()
     {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

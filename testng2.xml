@@ -2,14 +2,14 @@
 
     <test name="Study Sites">
         <classes>
-            <class name="TestNGDemo.Demo2.TutorialSites"/>
-            <class name="TestNGDemo.Demo2.AISites"/>
+            <class name="TestNGDemo.AllSites.TutorialSites"/>
+            <class name="TestNGDemo.AllSites.AISites"/>
         </classes>
     </test>
 
     <test name="Social sites">
         <classes>
-            <class name="TestNGDemo.Demo2.SocialSites"/>
+            <class name="TestNGDemo.AllSites.SocialSites"/>
         </classes>
     </test>
 

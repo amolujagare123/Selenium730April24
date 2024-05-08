@@ -1,15 +1,18 @@
 package Reports.util;
 
+import TestNGDemo.AllSites.Base;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+
 import static Reports.util.ForExtentReports.getScreenshot;
 import static Reports.util.ForExtentReports.initExtent;
 
-public class ExtentReportListeners implements ITestListener {
+public class ExtentReportListeners extends Base implements ITestListener {
     ExtentReports extent;
     ExtentTest test;
     public void onTestStart(ITestResult result) {
@@ -28,7 +31,11 @@ public class ExtentReportListeners implements ITestListener {
         System.out.println("onTestFailure");
 
         test.fail("This test is failed "+result.getThrowable());
-     //   test.addScreenCaptureFromPath("./screenshots/"+getScreenshot(driver));
+        try {
+            test.addScreenCaptureFromPath("./screenshots/"+getScreenshot(driver));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onStart(ITestContext context) {
